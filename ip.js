@@ -21,3 +21,9 @@ var ip__ = await fetchMoviesJSON().then(
         return (ips.ip);
     });
 console.log(ip__);
+
+
+
+$.get("https://ipinfo.io", function(response) {
+    console.log(response.city, response.country);
+}, "jsonp");
