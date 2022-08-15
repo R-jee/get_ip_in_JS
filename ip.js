@@ -11,6 +11,13 @@ fetchMoviesJSON().then(
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+fetch("https://ipinfo.io/json").then((response) => response.json()).then(
+(jsonResponse) =>{
+    console.log(jsonResponse.city, jsonResponse.country)    
+  }
+)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 async function fetchMoviesJSON() {
   const response = await fetch('https://api.ipify.org?format=json');
   const ips = await response.json();  return ip;
